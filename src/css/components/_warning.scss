@@ -6,9 +6,13 @@
   border: 1px solid $secondary;
   border-radius: 8px;
 
-  background-color: $bg-light;
+  background-color: $bg-dark;
 
   gap: 10px;
+
+  @include md-block {
+    background-color: $bg-light;
+  }
 }
 
 .warningMsg__icon {

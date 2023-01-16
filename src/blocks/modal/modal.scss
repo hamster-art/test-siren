@@ -1,0 +1,186 @@
+.modal {
+  display: flex;
+  position: fixed;
+  z-index: 100;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  flex-direction: column;
+
+  transition: top 500ms;
+
+  background-color: $bg-light;
+}
+
+.modal_hidden {
+  top: 100%;
+}
+
+.modal__header {
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  padding: 19px;
+
+  @include lg-block {
+    padding: 25px 42px 30px;
+  }
+}
+
+.modal__close {
+  width: 21px;
+  height: 21px;
+  padding: 0;
+
+  border-width: 0;
+  border-radius: 9999px;
+
+  background-color: transparent;
+}
+
+.modal__progress {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+
+  transition: width 250ms;
+
+  border-width: 0;
+
+  background-color: $bg-dark;
+
+  &::-webkit-progress-bar {
+    background-color: $bg-dark;
+  }
+
+  &::-webkit-progress-value {
+    transition: width 250ms;
+
+    background-color: $accent;
+  }
+
+  &::-moz-progress-bar {
+    background-color: $accent;
+  }
+}
+
+.modal__body {
+  flex-grow: 1;
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 24px 16px;
+  overflow: hidden;
+  overflow-y: auto;
+
+  text-align: center;
+
+  @include lg-block {
+    padding-top: 96px;
+  }
+}
+
+.modal__step_hidden {
+  display: none;
+}
+
+.modal__title {
+  font-size: 23px;
+  line-height: 32px;
+
+  @include lg-block {
+    font-size: 25px;
+    line-height: 36px;
+  }
+}
+
+.modal__subtitle {
+  margin-top: 8px;
+
+  color: $text-secondary;
+  font-size: 14px;
+  line-height: 20px;
+
+  @include lg-block {
+    margin-top: 4px;
+  }
+}
+
+.modal__subtitleAnswer {
+  text-transform: capitalize;
+}
+
+.modal__formBody {
+  margin-top: 16px;
+
+  @include md-block {
+    margin-top: 24px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.modal__formBody_stepOne {
+  @include md-block {
+    width: 352px;
+  }
+}
+
+.modal__formBody_stepTwo {
+  @include md-block {
+    width: 250px;
+  }
+}
+
+.modal__choices {
+  display: grid;
+
+  gap: 8px;
+
+  @include sm-block {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 16px;
+  }
+}
+
+.modal__formField {
+  margin-top: 8px;
+
+  @include md-block {
+    margin-top: 16px;
+  }
+}
+
+.modal__formBtn {
+  min-width: 100%;
+  margin-top: 16px;
+
+  @include md-block {
+    min-width: 87px;
+    margin-top: 24px;
+  }
+}
+
+.modal__hint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+
+  color: $text-secondary;
+  font-size: 14px;
+  line-height: 23px;
+
+  gap: 8px;
+}
+
+.modal__hintIcon {
+  width: 16px;
+  height: 16px;
+}

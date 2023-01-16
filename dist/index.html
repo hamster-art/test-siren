@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomeBuddy</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link />
+  </head>
+  <body>
+    <header class="header">
+  <div class="header__container container">
+    <a class="header__logo" href="/">
+      <img class="header__logoImg" src="./img/logo.svg" alt="" />
+      <span class="header__logoText">for homeowners</span>
+    </a>
+
+    <a class="header__link link link_lg" href="#zipForm"> Link to form </a>
+  </div>
+</header>
+
+    <main>
+      <section class="heroSection">
+  <div class="heroSection__container container">
+    <div>
+      <h1 class="heroSection__title">
+        How <span class="heroSection__accent">Over 410,000 Americans</span> Increased Their Property Value
+        <span class="heroSection__accent">In&nbsp;Under 6&nbsp;Hours*</span> With This Simple Upgrade.
+      </h1>
+      <p class="heroSection__text">Ideal for detached and semi-detached homes with sloped roofs.</p>
+    </div>
+    <div class="heroSection__media mediaBlock">
+      <picture class="mediaBlock__pic">
+        <source
+          srcset="./img/hero-mob.webp 1x, ./img/hero-mob_2x.webp 2x"
+          type="image/webp"
+          media="(max-width: 767px)"
+        />
+        <source
+          srcset="./img/hero.webp 1x, ./img/hero_2x.webp 2x"
+          type="image/webp"
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="./img/hero-mob.jpg 1x, ./img/hero-mob_2x.jpg 2x"
+          type="image/jpg"
+          media="(max-width: 768px)"
+        />
+        <source
+          srcset="./img/hero.jpg 1x, ./img/hero_2x.jpg 2x"
+          type="image/jpg"
+          media="(min-width: 768px)"
+        />
+        <img class="mediaBlock__img" src="./img/hero.jpg" alt="" loading="lazy" />
+      </picture>
+      <a class="mediaBlock__badge" href="https://www.google.com/" target="_blank">
+        <span>As seen on</span>
+        <img class="mediaBlock__logo" src="./img/nbc-logo.svg" alt=""/>
+      </a>
+    </div>
+  </div>
+</section>
+
+      <section class="featuresSection">
+  <div class="featuresSection__container container">
+    <div class="featuresSection__item">
+      <svg class="featuresSection__icon">
+        <use xlink:href="./icons/icons.svg#icon_badge"></use>
+      </svg>
+      <div class="featuresSection__info">
+        <p>Lifetime warranty with 100% no&#8209;clog guarantee</p>
+      </div>
+    </div>
+    <div class="featuresSection__item">
+      <svg class="featuresSection__icon">
+        <use xlink:href="./icons/icons.svg#icon_modern-house"></use>
+      </svg>
+      <div class="featuresSection__info">
+        <p>Fits most homes</p>
+      </div>
+    </div>
+    <div class="featuresSection__item">
+      <svg class="featuresSection__icon">
+        <use xlink:href="./icons/icons.svg#icon_savings"></use>
+      </svg>
+      <div class="featuresSection__info">
+        <p>Installs over existing gutters saving you thousands</p>
+      </div>
+    </div>
+    <div class="featuresSection__item">
+      <svg class="featuresSection__icon">
+        <use xlink:href="./icons/icons.svg#icon_rating"></use>
+      </svg>
+      <div class="featuresSection__info">
+        <img class="featuresSection__img" src="./img/rating.svg" alt="" width="80" height="16" />
+        <p>Сustomer rating</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="formSection" id="zipForm">
+  <div class="container">
+    <div class="formSection__wrapper">
+      <div class="formSection__warning warningMsg">
+        <svg class="warningMsg__icon">
+          <use xlink:href="./icons/icons.svg#icon_savings-fill"></use>
+        </svg>
+        <span>You will be surprised how affordable gutter guards are!</span>
+      </div>
+      <div class="formSection__inner">
+        <h2 class="formSection__title">See How Much Gutter Guards Cost In The XX, XXX Area</h2>
+        <div class="formSection__formWrapper">
+          <h3 class="formSection__formTitle">What is your ZIP Code?</h3>
+          <form class="formSection__form js-zip-form">
+            <div class="field">
+              <input class="field__input" id="zip" name="zip" type="text" placeholder="Enter ZIP Code" />
+              <label class="field__lbl" for="zip">Enter ZIP Code</label>
+            </div>
+            <p class="formSection__hint">Free, no-obligation estimates.</p>
+            <button class="formSection__submit btn btn_full" type="submit">Get estimate</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </main>
+    <footer class="footer">
+    <div class="footer__container container">
+        <a class="footer__logo" href="/">
+            <img class="footer__logoImg" src="./img/logo.svg" alt="" />
+        </a>
+        <ul class="footer__nav">
+            <li><a class="link link_sm" href="">Terms of Use</a></li>
+            <li><a class="link link_sm" href="">Privacy Policy</a></li>
+            <li><a class="link link_sm" href="">Cookie Policy</a></li>
+            <li> <a class="link link_sm" href="">Do Not Sell My Personal Information</a></li>
+            <li> <a class="link link_sm" href="">Contact us</a></li>
+        </ul>
+    </div>
+</footer>
+    <div class="modal modal_hidden js-modal">
+  <div class="modal__header">
+    <button class="modal__close js-modal-close">
+      <img src="./img/close.svg" alt="" />
+    </button>
+    <progress class="modal__progress js-modal-progress" max="100" value="0"></progress>
+  </div>
+  <div class="modal__body">
+    <form class="modal__form js-modal-form">
+      <div class="modal__step js-step">
+        <h2 class="modal__title">Are you homeowner or authorized to make property changes?</h2>
+
+        <div class="modal__formBody modal__formBody_stepOne">
+          <div class="modal__choices">
+            <div class="radioBtn">
+              <input class="visuallyHidden js-choice" value="yes" id="yes" type="radio" name="changes" />
+              <label class="radioBtn__lbl" for="yes">
+                <svg class="radioBtn__icon">
+                  <use xlink:href="./icons/icons.svg#icon_check"></use>
+                </svg>
+                <span>Yes</span>
+              </label>
+            </div>
+            <div class="radioBtn">
+              <input class="visuallyHidden js-choice" value="no" id="no" type="radio" name="changes" />
+              <label class="radioBtn__lbl" for="no">
+                <svg class="radioBtn__icon">
+                  <use xlink:href="./icons/icons.svg#icon_close"></use>
+                </svg>
+                <span>No</span>
+              </label>
+            </div>
+          </div>
+          <button class="modal__formBtn btn js-next-btn" type="button">Next</button>
+        </div>
+      </div>
+
+      <div class="modal__step modal__step_hidden js-step">
+        <h2 class="modal__title">Who should I prepare this estimate for?</h2>
+        <p class="modal__subtitle">Your choice: <b class="modal__subtitleAnswer js-answer"></b></p>
+
+        <div class="modal__formBody modal__formBody_stepTwo">
+          <div class="modal__formField field">
+            <input class="field__input" id="name" name="name" type="text" placeholder="Full name" />
+            <label class="field__lbl" for="name">Full name</label>
+          </div>
+          <div class="modal__formField field">
+            <input class="field__input" id="email" name="email" type="text" placeholder="Email address" />
+            <label class="field__lbl" for="email">Email address</label>
+          </div>
+          <button class="modal__formBtn btn" type="submit">Next</button>
+          <p class="modal__hint">
+            <svg class="modal__hintIcon">
+              <use xlink:href="./icons/icons.svg#icon_lock"></use>
+            </svg>
+            Safe, Secure and Confidential
+          </p>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+  <script src="js/script.js"></script>
+  </body>
+</html>

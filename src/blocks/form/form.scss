@@ -1,0 +1,111 @@
+.formSection {
+  margin-bottom: 44px;
+
+  @include md-block {
+    margin-bottom: 48px;
+  }
+}
+
+.formSection__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-right: 8px;
+  padding-left: 8px;
+
+  gap: 24px;
+
+  @include md-block {
+    padding: 44px 44px 64px;
+
+    border-radius: 24px;
+
+    background-color: $primary;
+    background-image: url('../img/form-bg.svg');
+
+    background-blend-mode: overlay;
+    gap: 16px;
+  }
+
+  @include lg-block {
+    padding: 64px 96px 96px;
+  }
+}
+
+.formSection__inner {
+  width: 100vw;
+  margin-left: -24px;
+  padding: 24px 24px 48px;
+
+  border-radius: 24px;
+
+  background-color: $primary;
+
+  @include md-block {
+    width: 100%;
+    margin-left: 0;
+    padding: 0;
+
+    background-color: transparent;
+  }
+}
+
+.formSection__warning {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.formSection__title {
+  color: $text-contrast;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 36px;
+
+  @include md-block {
+    text-align: center;
+  }
+}
+
+.formSection__formWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16px;
+  padding: 24px 16px;
+
+  border-radius: 16px;
+
+  background-color: $bg-light;
+
+  gap: 16px;
+
+  @include md-block {
+    margin-top: 30px;
+    padding: 48px;
+  }
+}
+
+.formSection__formTitle {
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.formSection__form {
+  width: 100%;
+
+  @include sm-block {
+    width: 320px;
+  }
+}
+
+.formSection__hint {
+  margin-top: 8px;
+
+  color: $text-secondary;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.formSection__submit {
+  margin-top: 16px;
+}

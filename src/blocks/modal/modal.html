@@ -1,0 +1,62 @@
+<div class="modal modal_hidden js-modal">
+  <div class="modal__header">
+    <button class="modal__close js-modal-close">
+      <img src="./img/close.svg" alt="" />
+    </button>
+    <progress class="modal__progress js-modal-progress" max="100" value="0"></progress>
+  </div>
+  <div class="modal__body">
+    <form class="modal__form js-modal-form">
+      <div class="modal__step js-step">
+        <h2 class="modal__title">Are you homeowner or authorized to make property changes?</h2>
+
+        <div class="modal__formBody modal__formBody_stepOne">
+          <div class="modal__choices">
+            <div class="radioBtn">
+              <input class="visuallyHidden js-choice" value="yes" id="yes" type="radio" name="changes" />
+              <label class="radioBtn__lbl" for="yes">
+                <svg class="radioBtn__icon">
+                  <use xlink:href="./icons/icons.svg#icon_check"></use>
+                </svg>
+                <span>Yes</span>
+              </label>
+            </div>
+            <div class="radioBtn">
+              <input class="visuallyHidden js-choice" value="no" id="no" type="radio" name="changes" />
+              <label class="radioBtn__lbl" for="no">
+                <svg class="radioBtn__icon">
+                  <use xlink:href="./icons/icons.svg#icon_close"></use>
+                </svg>
+                <span>No</span>
+              </label>
+            </div>
+          </div>
+          <button class="modal__formBtn btn js-next-btn" type="button">Next</button>
+        </div>
+      </div>
+
+      <div class="modal__step modal__step_hidden js-step">
+        <h2 class="modal__title">Who should I prepare this estimate for?</h2>
+        <p class="modal__subtitle">Your choice: <b class="modal__subtitleAnswer js-answer"></b></p>
+
+        <div class="modal__formBody modal__formBody_stepTwo">
+          <div class="modal__formField field">
+            <input class="field__input" id="name" name="name" type="text" placeholder="Full name" />
+            <label class="field__lbl" for="name">Full name</label>
+          </div>
+          <div class="modal__formField field">
+            <input class="field__input" id="email" name="email" type="text" placeholder="Email address" />
+            <label class="field__lbl" for="email">Email address</label>
+          </div>
+          <button class="modal__formBtn btn" type="submit">Next</button>
+          <p class="modal__hint">
+            <svg class="modal__hintIcon">
+              <use xlink:href="./icons/icons.svg#icon_lock"></use>
+            </svg>
+            Safe, Secure and Confidential
+          </p>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
